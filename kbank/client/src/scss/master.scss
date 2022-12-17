@@ -1,0 +1,96 @@
+// Imports
+@import "reset";
+@import "mixens";
+@import "fonts";
+
+$theme-color: $oc-orange-5;
+
+.main {
+  // @include debug(black);
+  @include full;
+  @include center;
+  background-image: url("../resources/images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  padding: 0 16px;
+}
+
+.form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px 0 rgba(154, 160, 185, 0.05), 0 5px 30px 0 rgba(166, 173, 201, 0.22);
+  width: 450px;
+  padding: 32px;
+
+  & > img {
+    height: 50px;
+    width: 50px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__label,
+  &__input,
+  &__button {
+    display: block;
+  }
+
+  &__label {
+    color: $oc-gray-7;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  &__input {
+    border: 1px solid $oc-gray-3;
+    border-radius: 4px;
+    font-size: 12px;
+    height: 40px;
+    margin-bottom: 16px;
+    outline: none;
+    padding: 0 8px;
+    transition: background-color 200ms, border 200ms;
+    width: 100%;
+
+    &:focus {
+      background-color: $oc-gray-0;
+      border: 1px solid $theme-color;
+    }
+  }
+
+  &__button {
+    @include transition-button($theme-color);
+    background-color: $theme-color;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    height: 48px;
+    margin-top: 32px;
+    width: 100%;
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+  }
+
+  &__container {
+    @include center;
+    margin: 16px 0 8px;
+  }
+
+  &__anchor {
+    @include transition-anchor(rgba($theme-color, 0.32));
+    color: $oc-gray-7;
+    font-size: 14px;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+  }
+}

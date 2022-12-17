@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>KBank — Finance and Teach Your Kids</title>
+  <meta name="title" content="KBank — Finance and Teach Your Kids">
+  <meta name="description" content="Many parents give their children an allowance. With KBank, parents can add available chores.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kbank.now.sh">
+  <meta property="og:title" content="KBank — Finance and Teach Your Kids">
+  <meta property="og:description" content="Many parents give their children an allowance. With KBank, parents can add available chores.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/npathapp/kbank/master/design/meta-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kbank.now.sh">
+  <meta property="twitter:title" content="KBank — Finance and Teach Your Kids">
+  <meta property="twitter:description" content="Many parents give their children an allowance. With KBank, parents can add available chores.">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/npathapp/kbank/master/design/meta-image.png">
+
+  <!-- Base -->
+  <link rel="shortcut icon" href="../resources/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../scss/master.scss">
+  <script defer src="../js/auth.js"></script>
+</head>
+
+<body>
+
+  <main class="main">
+    <form class="form" onSubmit="index.login()">
+      <img src="../resources/images/favicon.png" alt="KBank Logo" draggable="false">
+      <h1 class="form__title">Login</h1>
+      <label class="form__label" for="email">Email</label>
+      <input class="form__input" type="email" name="email" placeholder="e.g. babuthomas@gmail.com" spellcheck="false" required>
+      <label class="form__label" for="password">Password</label>
+      <input class="form__input" type="password" name="password" placeholder="Must be at least 6 characters" minlength="6" maxlength="100" required>
+      <button class="form__button">Log in</button>
+      <div class="form__container">
+        <a class="form__anchor" href="signup.html">Create account instead</a>
+      </div>
+      <div class="form__container">
+        <a class="form__anchor" href="dashboard.html">Demo</a>
+      </div>
+    </form>
+  </main>
+
+</body>
+
+</html>

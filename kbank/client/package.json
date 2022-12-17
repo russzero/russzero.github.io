@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "npm run client:build",
+    "client": "open-cli http://localhost:1234/login.html && parcel src/pages/*.html -d dist/development/ --global index",
+    "client:build": "parcel build src/pages/*.html -d dist/production/ --global index --no-source-maps --public-url ./",
+    "dev": "npm run client",
+    "package:delete": "rimraf node_modules/ && rimraf package-lock.json",
+    "package:update": "npx npm-check-updates -u",
+    "server": "npm run dev --prefix ../server",
+    "start": "concurrently \"npm:client\" \"npm:server\""
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "open-color": "^1.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "latest",
+    "open-cli": "latest",
+    "parcel-bundler": "latest",
+    "parcel-plugin-inliner": "latest",
+    "rimraf": "latest",
+    "sass": "latest"
+  }
+}
